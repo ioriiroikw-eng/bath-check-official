@@ -27,55 +27,24 @@
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         .gradient-text { background: linear-gradient(45deg, #ec4899, #8b5cf6); -webkit-background-clip: text; color: transparent; }
         
-        /* スマホモックアップ（はみ出し防止＆スクロール対応） */
-        .mockup-frame {
-            border: 12px solid #2d2d2d;
-            border-radius: 40px;
-            overflow: hidden; /* ★重要：これではみ出しを防ぐ */
-            background: #fff;
-            position: relative;
-            box-shadow: 0 20px 50px -10px rgba(0,0,0,0.3);
-            aspect-ratio: 9 / 19; /* スマホの縦横比を固定 */
-            max-width: 260px;
-            margin: 0 auto;
-        }
-        
-        /* ノッチ（iPhoneの上の黒い部分） */
-        .mockup-notch {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40%;
-            height: 24px;
-            background: #2d2d2d;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-            z-index: 10;
-        }
-
-        /* 画面内スクロールエリア */
-        .mockup-screen {
-            width: 100%;
-            height: 100%;
-            overflow-y: auto; /* ★重要：中身が長い場合はスクロールさせる */
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* スクロールバーを隠す */
-        }
-        .mockup-screen::-webkit-scrollbar { display: none; }
-
-        /* 画像調整 */
-        .mockup-screen img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
         /* Q&Aのアコーディオン */
         details > summary { list-style: none; cursor: pointer; }
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary ~ * { animation: sweep .3s ease-in-out; }
         @keyframes sweep { 0% {opacity: 0; margin-top: -10px} 100% {opacity: 1; margin-top: 0px} }
+        
+        /* シンプル画像表示のためのスタイル */
+        .screenshot-img {
+            max-width: 300px; /* 画像の最大幅をスマホサイズ程度に制限 */
+            width: 100%;
+            height: auto;
+            border-radius: 16px; /* 角を丸くしてアプリ画面らしく */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 影をつけて立体的に */
+            transition: transform 0.3s ease;
+        }
+        .screenshot-img:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -114,39 +83,24 @@
 
             <div class="grid md:grid-cols-3 gap-12 items-start">
                 
-                <div class="text-center group">
-                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
-                        <div class="mockup-notch"></div>
-                        <div class="mockup-screen">
-                            <img src="./screen1.png" alt="メイン画面">
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <img src="./screen1.png" alt="メイン画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-pink-600 mb-2">1. 清潔度の可視化</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>直感的に判断できます。
                     </p>
                 </div>
 
-                <div class="text-center group">
-                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
-                        <div class="mockup-notch"></div>
-                        <div class="mockup-screen">
-                            <img src="./screen2.png" alt="カレンダー画面">
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <img src="./screen2.png" alt="カレンダー画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-blue-500 mb-2">2. 履歴と天気連動</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         「いつ入ったっけ？」を自動記録。<br>暑い日はダメージ倍増など、<br>リアルな天気とも連動します。
                     </p>
                 </div>
 
-                <div class="text-center group">
-                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
-                        <div class="mockup-notch"></div>
-                        <div class="mockup-screen">
-                            <img src="./screen3.png" alt="占い画面">
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <img src="./screen3.png" alt="占い画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-purple-500 mb-2">3. 入浴＝報酬</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         お風呂に入ってリセットすると、<br>その日の運勢占いが出現。<br>「入るといいことがある」を作ります。

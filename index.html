@@ -27,13 +27,48 @@
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         .gradient-text { background: linear-gradient(45deg, #ec4899, #8b5cf6); -webkit-background-clip: text; color: transparent; }
         
-        /* スマホモックアップ風の枠 */
-        .phone-mockup {
-            border: 8px solid #333;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
+        /* スマホモックアップ（はみ出し防止＆スクロール対応） */
+        .mockup-frame {
+            border: 12px solid #2d2d2d;
+            border-radius: 40px;
+            overflow: hidden; /* ★重要：これではみ出しを防ぐ */
             background: #fff;
+            position: relative;
+            box-shadow: 0 20px 50px -10px rgba(0,0,0,0.3);
+            aspect-ratio: 9 / 19; /* スマホの縦横比を固定 */
+            max-width: 260px;
+            margin: 0 auto;
+        }
+        
+        /* ノッチ（iPhoneの上の黒い部分） */
+        .mockup-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 24px;
+            background: #2d2d2d;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 10;
+        }
+
+        /* 画面内スクロールエリア */
+        .mockup-screen {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto; /* ★重要：中身が長い場合はスクロールさせる */
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* スクロールバーを隠す */
+        }
+        .mockup-screen::-webkit-scrollbar { display: none; }
+
+        /* 画像調整 */
+        .mockup-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Q&Aのアコーディオン */
@@ -45,17 +80,17 @@
 </head>
 <body class="antialiased">
 
-    <header class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50">
+    <header class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50 shadow-sm">
         <div class="text-xl font-black font-pop text-pink-500">フロハイッタ？</div>
         <a href="https://ioriiroikw-eng.github.io/bath-check/" class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
     </header>
 
-    <section class="pt-12 pb-20 px-6 text-center max-w-4xl mx-auto">
+    <section class="pt-16 pb-24 px-6 text-center max-w-4xl mx-auto">
         <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight fade-in-up">
             まだ、毎日<br>
             <span class="gradient-text">お風呂に入ってるの？</span>
         </h1>
-        <p class="text-gray-600 font-bold mb-8 text-sm md:text-base leading-relaxed fade-in-up" style="animation-delay: 0.2s;">
+        <p class="text-gray-600 font-bold mb-10 text-sm md:text-base leading-relaxed fade-in-up" style="animation-delay: 0.2s;">
             「入らなきゃ」という義務感を捨てよう。<br>
             あなたの清潔度(HP)を可視化し、<br class="md:hidden">最適なタイミングを提案する<br>
             <strong>新時代の入浴管理ツール。</strong>
@@ -67,30 +102,37 @@
             <p class="text-[10px] text-gray-400 mt-2">※放置するとこうなります</p>
         </div>
 
-        <a href="https://ioriiroikw-eng.github.io/bath-check/" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black py-4 px-10 rounded-full shadow-lg text-lg hover:scale-105 transition-all fade-in-up" style="animation-delay: 0.6s;">
+        <a href="https://ioriiroikw-eng.github.io/bath-check/" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black py-4 px-12 rounded-full shadow-lg text-lg hover:scale-105 transition-all fade-in-up" style="animation-delay: 0.6s;">
             今すぐ診断する（無料）
         </a>
     </section>
 
-    <section class="py-20 bg-pink-50">
-        <div class="max-w-5xl mx-auto px-6">
+    <section class="py-24 bg-pink-50">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-center text-2xl font-black text-gray-800 mb-4 font-pop">機能ハイライト</h2>
-            <p class="text-center text-xs font-bold text-gray-500 mb-12">面倒なお風呂を「ゲーム」に変える3つの機能</p>
+            <p class="text-center text-xs font-bold text-gray-500 mb-16">面倒なお風呂を「ゲーム」に変える3つの機能</p>
 
-            <div class="grid md:grid-cols-3 gap-8 items-start">
-                <div class="text-center">
-                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
-                        <img src="./screen1.png" alt="メイン画面" class="w-full h-full object-cover">
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                
+                <div class="text-center group">
+                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
+                        <div class="mockup-notch"></div>
+                        <div class="mockup-screen">
+                            <img src="./screen1.png" alt="メイン画面">
+                        </div>
                     </div>
                     <h3 class="font-bold text-lg text-pink-600 mb-2">1. 清潔度の可視化</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>数値とキャラの変化で直感的に判断。
+                        時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>直感的に判断できます。
                     </p>
                 </div>
 
-                <div class="text-center">
-                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
-                        <img src="./screen2.png" alt="カレンダー画面" class="w-full h-full object-cover">
+                <div class="text-center group">
+                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
+                        <div class="mockup-notch"></div>
+                        <div class="mockup-screen">
+                            <img src="./screen2.png" alt="カレンダー画面">
+                        </div>
                     </div>
                     <h3 class="font-bold text-lg text-blue-500 mb-2">2. 履歴と天気連動</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
@@ -98,15 +140,19 @@
                     </p>
                 </div>
 
-                <div class="text-center">
-                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
-                        <img src="./screen3.png" alt="占い画面" class="w-full h-full object-cover">
+                <div class="text-center group">
+                    <div class="mockup-frame mb-6 transition-transform group-hover:-translate-y-2 duration-300">
+                        <div class="mockup-notch"></div>
+                        <div class="mockup-screen">
+                            <img src="./screen3.png" alt="占い画面">
+                        </div>
                     </div>
                     <h3 class="font-bold text-lg text-purple-500 mb-2">3. 入浴＝報酬</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         お風呂に入ってリセットすると、<br>その日の運勢占いが出現。<br>「入るといいことがある」を作ります。
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -116,28 +162,28 @@
             <h2 class="text-center text-xl font-black text-gray-800 mb-10 font-pop">よくある質問</h2>
             
             <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. 無料で使えますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
                     </summary>
                     <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        はい、完全無料でお使いいただけます。アプリ内課金もありません。
+                        はい、完全無料でお使いいただけます。広告も控えめで、アプリ内課金もありません。
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. アプリのインストールは必要ですか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
                     </summary>
                     <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        いいえ、ブラウザでそのまま使えるWebアプリです。<br>
+                        いいえ、インストール不要です。ブラウザでアクセスするだけですぐに使えます。<br>
                         iPhoneの場合はSafariの「ホーム画面に追加」をすると、アプリのように全画面で使えて便利です。
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. HPが0になるとどうなりますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>

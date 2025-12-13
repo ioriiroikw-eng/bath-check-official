@@ -18,7 +18,6 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -27,16 +26,31 @@
         .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(30px); }
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         .gradient-text { background: linear-gradient(45deg, #ec4899, #8b5cf6); -webkit-background-clip: text; color: transparent; }
+        
+        /* スマホモックアップ風の枠 */
+        .phone-mockup {
+            border: 8px solid #333;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+        
+        /* Q&Aのアコーディオン */
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; margin-top: -10px} 100% {opacity: 1; margin-top: 0px} }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto">
+    <header class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50">
         <div class="text-xl font-black font-pop text-pink-500">フロハイッタ？</div>
-        <a href="https://ioriiroikw-eng.github.io/bath-check/" class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition">アプリを開く</a>
+        <a href="https://ioriiroikw-eng.github.io/bath-check/" class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
     </header>
 
-    <section class="pt-10 pb-20 px-6 text-center max-w-4xl mx-auto">
+    <section class="pt-12 pb-20 px-6 text-center max-w-4xl mx-auto">
         <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight fade-in-up">
             まだ、毎日<br>
             <span class="gradient-text">お風呂に入ってるの？</span>
@@ -49,39 +63,121 @@
 
         <div class="relative w-64 h-64 mx-auto mb-10 fade-in-up" style="animation-delay: 0.4s;">
             <div class="absolute inset-0 bg-pink-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-            <img src="./Senden.gif" alt="清潔度が下がってゾンビ化する様子" class="relative z-10 w-full h-full object-contain drop-shadow-xl">
+            <img src="./Senden.gif" alt="ゾンビ化アニメーション" class="relative z-10 w-full h-full object-contain drop-shadow-xl">
+            <p class="text-[10px] text-gray-400 mt-2">※放置するとこうなります</p>
         </div>
 
         <a href="https://ioriiroikw-eng.github.io/bath-check/" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black py-4 px-10 rounded-full shadow-lg text-lg hover:scale-105 transition-all fade-in-up" style="animation-delay: 0.6s;">
-            今すぐ診断する（アプリへ）
+            今すぐ診断する（無料）
         </a>
     </section>
 
-    <section class="py-16 px-6 bg-gray-50">
-        <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-xl font-black text-gray-800 mb-4 font-pop">開発者の想い</h2>
-            <p class="text-sm text-gray-600 mb-8">
-                なぜこのアプリを作ったのか？<br>
-                「生存戦略」としての入浴哲学をnoteで公開中。
-            </p>
-            <a href="https://note.com/english_sisan/n/n6d558eaec751?sub_rt=share_pw" target="_blank" class="inline-block bg-white border-2 border-gray-200 text-gray-700 font-bold py-3 px-8 rounded-full hover:border-pink-400 hover:text-pink-500 transition">
-                note記事を読む
-            </a>
+    <section class="py-20 bg-pink-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-center text-2xl font-black text-gray-800 mb-4 font-pop">機能ハイライト</h2>
+            <p class="text-center text-xs font-bold text-gray-500 mb-12">面倒なお風呂を「ゲーム」に変える3つの機能</p>
+
+            <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="text-center">
+                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
+                        <img src="./screen1.png" alt="メイン画面" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-pink-600 mb-2">1. 清潔度の可視化</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>数値とキャラの変化で直感的に判断。
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
+                        <img src="./screen2.png" alt="カレンダー画面" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-blue-500 mb-2">2. 履歴と天気連動</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        「いつ入ったっけ？」を自動記録。<br>暑い日はダメージ倍増など、<br>リアルな天気とも連動します。
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="phone-mockup aspect-[9/16] mb-6 mx-auto w-full max-w-[240px]">
+                        <img src="./screen3.png" alt="占い画面" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-purple-500 mb-2">3. 入浴＝報酬</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        お風呂に入ってリセットすると、<br>その日の運勢占いが出現。<br>「入るといいことがある」を作ります。
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-400 text-xs border-t border-gray-100">
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-center text-xl font-black text-gray-800 mb-10 font-pop">よくある質問</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                    <summary class="flex justify-between items-center font-bold text-gray-700">
+                        <span>Q. 無料で使えますか？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
+                        はい、完全無料でお使いいただけます。アプリ内課金もありません。
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                    <summary class="flex justify-between items-center font-bold text-gray-700">
+                        <span>Q. アプリのインストールは必要ですか？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
+                        いいえ、ブラウザでそのまま使えるWebアプリです。<br>
+                        iPhoneの場合はSafariの「ホーム画面に追加」をすると、アプリのように全画面で使えて便利です。
+                    </p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-4 cursor-pointer open:bg-pink-50 transition">
+                    <summary class="flex justify-between items-center font-bold text-gray-700">
+                        <span>Q. HPが0になるとどうなりますか？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
+                        キャラクターがゾンビ化し、社会的・衛生的に「終わり」を迎えた状態になります。<br>
+                        速やかにお風呂に入って「リセット」ボタンを押し、人間に戻ることを強く推奨します。
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-gray-900 text-white relative overflow-hidden">
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <h2 class="text-xl md:text-2xl font-black mb-4 font-pop">開発者の想い</h2>
+            <p class="text-gray-300 text-sm mb-8 leading-relaxed">
+                なぜこのアプリを作ったのか？<br>
+                「生存戦略」としての入浴哲学をnoteで公開中。
+            </p>
+            <a href="https://note.com/english_sisan/n/n6d558eaec751?sub_rt=share_pw" target="_blank" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition">
+                noteで思想を読む
+            </a>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-400 text-xs bg-gray-50">
         <p class="mb-4 font-bold">フロハイッタ？ 公式サイト</p>
         <div class="flex flex-wrap justify-center gap-4 mb-6">
-            <a href="https://x.com/bathcheck" target="_blank" class="flex items-center gap-1 text-gray-500 hover:text-black transition">
+            <a href="https://x.com/bathcheck" target="_blank" class="flex items-center gap-1 hover:text-black transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 <span>公式X (@bathcheck)</span>
             </a>
-            <a href="https://note.com/english_sisan/portal" target="_blank" class="text-green-600 hover:opacity-70">
+            <a href="https://note.com/english_sisan/portal" target="_blank" class="hover:text-green-600 transition">
                 開発者note
             </a>
         </div>
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
+
 </body>
 </html>

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ioriiroikw-eng.github.io/bath-check-official/sitemap.xml
+Sitemap: https://bath-check.com/sitemap.xml

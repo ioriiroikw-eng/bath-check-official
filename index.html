@@ -7,8 +7,8 @@
     <meta name="google-site-verification" content="yEVgbMoZqDxkxql3bO3llulxWiebh1FDnB4xKPgmrPQ" />
 
     <title>フロハイッタ？公式｜「お風呂キャンセル界隈」のための入浴最適化ツール</title>
-    <meta name="description" content="毎日お風呂に入る必要はありません。気温や活動量から清潔度(HP)を算出し、あなたにとって「適切な入浴タイミング」を可視化する無料Webアプリです。">
-    <meta name="keywords" content="お風呂,めんどくさい,お風呂キャンセル界隈,ライフハック,アプリ,健康,フロハイッタ,入浴管理">
+    <meta name="description" content="毎日お風呂に入る必要はありません。気温や活動量から清潔度(HP)を算出し、あなたにとって「適切な入浴タイミング」を可視化する無料Webアプリです。サボンちゃんの変化で汚さを管理しよう。">
+    <meta name="keywords" content="お風呂,めんどくさい,お風呂キャンセル界隈,ライフハック,アプリ,健康,フロハイッタ,入浴管理,サボンちゃん,清潔度">
     
     <meta property="og:title" content="フロハイッタ？｜まだ、毎日お風呂に入ってるの？">
     <meta property="og:description" content="入浴を「義務」から「戦略」へ。あなたの最適な入浴タイミングを可視化します。">
@@ -33,18 +33,26 @@
         details[open] summary ~ * { animation: sweep .3s ease-in-out; }
         @keyframes sweep { 0% {opacity: 0; margin-top: -10px} 100% {opacity: 1; margin-top: 0px} }
         
-        /* シンプル画像表示のためのスタイル */
+        /* 画像スタイル */
         .screenshot-img {
-            max-width: 300px; /* 画像の最大幅をスマホサイズ程度に制限 */
+            max-width: 300px;
             width: 100%;
             height: auto;
-            border-radius: 16px; /* 角を丸くしてアプリ画面らしく */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 影をつけて立体的に */
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .screenshot-img:hover {
-            transform: translateY(-5px);
+        .screenshot-img:hover { transform: translateY(-5px); }
+
+        .char-img {
+            max-width: 120px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 1rem;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
         }
+        .char-img:hover { transform: scale(1.1) rotate(5deg); }
     </style>
 </head>
 <body class="antialiased">
@@ -82,7 +90,6 @@
             <p class="text-center text-xs font-bold text-gray-500 mb-16">面倒なお風呂を「ゲーム」に変える3つの機能</p>
 
             <div class="grid md:grid-cols-3 gap-12 items-start">
-                
                 <div class="text-center">
                     <img src="./screen1.png" alt="メイン画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-pink-600 mb-2">1. 清潔度の可視化</h3>
@@ -90,7 +97,6 @@
                         時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>直感的に判断できます。
                     </p>
                 </div>
-
                 <div class="text-center">
                     <img src="./screen2.png" alt="カレンダー画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-blue-500 mb-2">2. 履歴と天気連動</h3>
@@ -98,7 +104,6 @@
                         「いつ入ったっけ？」を自動記録。<br>暑い日はダメージ倍増など、<br>リアルな天気とも連動します。
                     </p>
                 </div>
-
                 <div class="text-center">
                     <img src="./screen3.png" alt="占い画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-purple-500 mb-2">3. 入浴＝報酬</h3>
@@ -106,7 +111,76 @@
                         お風呂に入ってリセットすると、<br>その日の運勢占いが出現。<br>「入るといいことがある」を作ります。
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="py-20 px-6 bg-white border-b border-gray-100">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-xl md:text-2xl font-black text-gray-800 mb-8 font-pop">
+                なぜHPが減るのか？<br>
+                <span class="text-pink-500">清潔度ロジック公開</span>
+            </h2>
+            <div class="bg-blue-50 rounded-3xl p-8 text-left space-y-6">
+                <p class="text-gray-700 font-medium leading-relaxed">
+                    『フロハイッタ？』のHPは、単なる時間経過だけではなく、以下の3つの要素を複合的に計算しています。
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="bg-pink-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                        <div>
+                            <strong class="block text-gray-800">時間経過による減衰</strong>
+                            <span class="text-sm text-gray-600">入浴から時間が経つほど、清潔度の減少スピードは二次曲線的に加速します。</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="bg-blue-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+                        <div>
+                            <strong class="block text-gray-800">気温・湿度との連動</strong>
+                            <span class="text-sm text-gray-600">OpenMeteo APIを使用し、あなたの地域のリアルタイム天気と連動。暑い日はダメージが増加します。</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="bg-orange-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                        <div>
+                            <strong class="block text-gray-800">活動量の入力ブースト</strong>
+                            <span class="text-sm text-gray-600">「食事」「外出」「運動」などのアクションボタンを押すことで、活動に応じた汚れがHPに反映されます。</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-pink-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xl md:text-2xl font-black text-gray-800 mb-4 font-pop">
+                サボンちゃんの変化
+            </h2>
+            <p class="text-gray-600 text-sm mb-12">あなたの行動ひとつで、彼女はプリンセスにもゾンビにもなります。</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <img src="./char_80.png" alt="プリンセスサボン" class="char-img">
+                    <h3 class="font-bold text-pink-500 mb-2">HP 100~80%</h3>
+                    <p class="text-xs text-gray-500 font-bold">状態：プリンセス</p>
+                    <p class="text-sm text-gray-600 mt-2">入浴直後の無敵状態。<br>清潔感の権化であり、世界が彼女に味方しています。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <img src="./char_50.png" alt="困り顔サボン" class="char-img">
+                    <h3 class="font-bold text-orange-400 mb-2">HP 50%以下</h3>
+                    <p class="text-xs text-gray-500 font-bold">状態：要注意</p>
+                    <p class="text-sm text-gray-600 mt-2">日常生活で汚れが蓄積。<br>そろそろ入浴を意識しないと、取り返しがつかなくなります。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border-2 border-gray-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gray-800 text-white text-[10px] px-2 py-1">DANGER</div>
+                    <img src="./char_00.png" alt="ゾンビサボン" class="char-img">
+                    <h3 class="font-bold text-gray-800 mb-2">HP 0%</h3>
+                    <p class="text-xs text-gray-500 font-bold">状態：ゾンビ</p>
+                    <p class="text-sm text-gray-600 mt-2">お風呂をサボりすぎた末路。<br>社会的・衛生的に「終わり」を迎えた状態。緊急入浴が必要です。</p>
+                </div>
             </div>
         </div>
     </section>
@@ -158,7 +232,7 @@
                 なぜこのアプリを作ったのか？<br>
                 「生存戦略」としての入浴哲学をnoteで公開中。
             </p>
-            <a href="https://note.com/bath_check/n/n6d558eaec751?sub_rt=share_pw" target="_blank" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition">
+            <a href="https://note.com/bath_check" target="_blank" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition">
                 noteで思想を読む
             </a>
         </div>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="サーモス">
+    <meta name="theme-color" content="#ec4899">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5DPBJRNH');</script>
+    <link rel="icon" href="../icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../icon.png">
+
+    <title>「フロハイッタ？」アプリの使い方完全ガイド｜フロハイッタ？公式</title>
+    <meta name="description" content="入浴最適化アプリ「フロハイッタ？」の使い方を徹底解説。清潔度（HP）の見方、活動記録の方法、おみくじ機能など、すべての機能を詳しくご紹介します。">
+
+    <link rel="canonical" href="https://bath-check.com/blog/app-guide.html" />
+
+    <meta property="og:title" content="「フロハイッタ？」アプリの使い方完全ガイド">
+    <meta property="og:description" content="入浴最適化アプリ「フロハイッタ？」の使い方を徹底解説。すべての機能を詳しくご紹介。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bath-check.com/blog/app-guide.html">
+    <meta property="og:image" content="https://bath-check.com/icon.png">
+    <meta property="og:site_name" content="フロハイッタ？公式HP" />
+    <meta property="article:published_time" content="2025-12-21" />
+    <meta property="article:author" content="サーモス" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .font-pop {
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .prose h2 {
+            scroll-margin-top: 100px;
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DPBJRNH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header
+        class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50 shadow-sm">
+        <a href="../" class="text-xl font-black font-pop text-pink-500">フロハイッタ？</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-gray-600">
+            <a href="../" class="hover:text-pink-500 transition">ホーム</a>
+            <a href="../about.html" class="hover:text-pink-500 transition">運営者情報</a>
+            <a href="./" class="text-pink-500">コラム</a>
+            <a href="../contact.html" class="hover:text-pink-500 transition">お問い合わせ</a>
+        </nav>
+        <a href="https://app.bath-check.com/"
+            class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        <!-- パンくずリスト -->
+        <nav class="text-sm text-gray-500 mb-6">
+            <a href="../" class="hover:text-pink-500">ホーム</a>
+            <span class="mx-2">›</span>
+            <a href="./" class="hover:text-pink-500">コラム</a>
+            <span class="mx-2">›</span>
+            <span class="text-gray-700">アプリの使い方</span>
+        </nav>
+
+        <!-- 記事ヘッダー -->
+        <article>
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="bg-green-100 text-green-600 text-xs font-bold px-3 py-1 rounded-full">使い方ガイド</span>
+                    <time datetime="2025-12-21" class="text-sm text-gray-500">2025.12.21</time>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-black leading-tight mb-4">
+                    <span class="gradient-text">「フロハイッタ？」アプリの</span><br>
+                    使い方完全ガイド
+                </h1>
+                <p class="text-gray-600 leading-relaxed">
+                    入浴最適化アプリ「フロハイッタ？」を使えば、あなたの「清潔度（HP）」を可視化して、本当に必要な入浴タイミングがわかります。この記事では、すべての機能とその使い方を詳しく解説します。
+                </p>
+            </header>
+
+            <!-- 目次 -->
+            <nav class="bg-gray-50 rounded-2xl p-6 mb-10">
+                <h2 class="font-bold text-gray-800 mb-3 text-sm">📌 この記事の目次</h2>
+                <ol class="space-y-2 text-sm text-gray-600">
+                    <li><a href="#start" class="hover:text-pink-500 transition">1. アプリを始めよう</a></li>
+                    <li><a href="#hp" class="hover:text-pink-500 transition">2. 清潔度（HP）の見方</a></li>
+                    <li><a href="#record" class="hover:text-pink-500 transition">3. 入浴・風呂キャンセルを記録する</a></li>
+                    <li><a href="#calendar" class="hover:text-pink-500 transition">4. カレンダーで振り返る</a></li>
+                    <li><a href="#fortune" class="hover:text-pink-500 transition">5. おみくじ機能</a></li>
+                    <li><a href="#pwa" class="hover:text-pink-500 transition">6. ホーム画面に追加する</a></li>
+                    <li><a href="#tips" class="hover:text-pink-500 transition">7. 活用のコツ</a></li>
+                </ol>
+            </nav>
+
+            <!-- 本文 -->
+            <div class="prose prose-pink max-w-none space-y-10 text-gray-700 leading-relaxed">
+
+                <!-- セクション1 -->
+                <section id="start">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                        アプリを始めよう
+                    </h2>
+                    <p>
+                        「フロハイッタ？」は<strong>ダウンロード不要のWebアプリ</strong>です。以下のURLにアクセスするだけですぐに始められます。
+                    </p>
+
+                    <div
+                        class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-6 text-center text-white my-6">
+                        <p class="text-pink-100 mb-3 text-sm">アプリURL</p>
+                        <a href="https://app.bath-check.com/"
+                            class="text-xl font-bold hover:underline">app.bath-check.com</a>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-xl p-5 my-6">
+                        <h3 class="font-bold text-blue-700 mb-3">📱 初回アクセス時</h3>
+                        <ol class="space-y-2 text-gray-700 list-decimal list-inside">
+                            <li>ウェルカム画面が表示されます</li>
+                            <li>「今の状態」を選択します（近所に出かけた、学校/バイト終わり、など）</li>
+                            <li>初期HPが設定され、メイン画面が表示されます</li>
+                        </ol>
+                    </div>
+
+                    <p>
+                        すべてのデータは<strong>お使いのブラウザ（ローカルストレージ）に保存</strong>されます。アカウント登録は不要で、すぐに使い始められます。
+                    </p>
+                </section>
+
+                <!-- セクション2 -->
+                <section id="hp">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                        清潔度（HP）の見方
+                    </h2>
+                    <p>
+                        メイン画面の中央に表示される<strong>HP（ヒットポイント）</strong>があなたの現在の清潔度です。
+                    </p>
+
+                    <div class="bg-orange-50 rounded-2xl p-6 my-6">
+                        <h3 class="font-bold text-orange-700 mb-4">🎮 HPの仕組み</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span
+                                    class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">100%</span>
+                                <span>お風呂上がり直後の状態。清潔度MAX！</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span
+                                    class="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">50〜70%</span>
+                                <span>まだ余裕あり。今日は入らなくても大丈夫かも。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span
+                                    class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">30%以下</span>
+                                <span>そろそろ入浴した方がいいタイミング。</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-400 rounded-r-xl p-5 my-6">
+                        <h4 class="font-bold text-purple-700 mb-2">💡 HPが減る要因</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• <strong>時間経過</strong>：入浴後からの経過時間</li>
+                            <li>• <strong>活動量</strong>：運動や外出など</li>
+                            <li>• <strong>気温</strong>：暑い日は汗をかきやすい</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        HPはあくまで<strong>目安</strong>です。「今日は入らなくても大丈夫」という判断を罪悪感なくできるようにするためのものです。
+                    </p>
+                </section>
+
+                <!-- セクション3 -->
+                <section id="record">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                        入浴・風呂キャンセルを記録する
+                    </h2>
+                    <p>
+                        メイン画面下部のボタンで、その日の状態を記録できます。
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 my-6">
+                        <div class="feature-card bg-white border-2 border-pink-200 rounded-2xl p-5 text-center">
+                            <div class="text-4xl mb-3">🛁</div>
+                            <h4 class="font-bold text-pink-600 mb-2">お風呂に入った</h4>
+                            <p class="text-sm text-gray-600">HPが100%にリセット。おみくじが引けて、カレンダーに「入浴」スタンプが付きます。</p>
+                        </div>
+                        <div class="feature-card bg-white border-2 border-purple-200 rounded-2xl p-5 text-center">
+                            <div class="text-4xl mb-3">😴</div>
+                            <h4 class="font-bold text-purple-600 mb-2">風呂キャンセル</h4>
+                            <p class="text-sm text-gray-600">今日は入らないと決断。カレンダーに記録されます。</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5 my-6">
+                        <h4 class="font-bold text-yellow-700 mb-2">⏰ 記録のタイミング</h4>
+                        <p class="text-sm text-gray-700">
+                            寝る前に「今日はお風呂に入ったか、入らなかったか」を記録するのがおすすめ。習慣化することで、自分の入浴パターンが見えてきます。
+                        </p>
+                    </div>
+                </section>
+
+                <!-- セクション4 -->
+                <section id="calendar">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                        カレンダーで振り返る
+                    </h2>
+                    <p>
+                        カレンダー機能では、過去の入浴履歴を一目で確認できます。
+                    </p>
+
+                    <div class="bg-green-50 rounded-2xl p-6 my-6">
+                        <h3 class="font-bold text-green-700 mb-4">📅 カレンダーの見方</h3>
+                        <div class="grid grid-cols-3 gap-3 text-center text-sm">
+                            <div class="bg-white rounded-lg p-3">
+                                <span class="text-2xl">🛁</span>
+                                <p class="text-gray-600 mt-1">入浴した日</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <span class="text-2xl">😴</span>
+                                <p class="text-gray-600 mt-1">風呂キャンセルした日</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3">
+                                <span class="text-2xl">−</span>
+                                <p class="text-gray-600 mt-1">記録なし</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        「1週間でどのくらい入浴しているか」「風呂キャンセルが続いているな」など、自分のパターンを客観的に把握できます。<strong>罪悪感を持たず、自分のペースを知る</strong>ためのツールとして活用してください。
+                    </p>
+                </section>
+
+                <!-- セクション5 -->
+                <section id="fortune">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">5</span>
+                        おみくじ機能
+                    </h2>
+                    <p>
+                        「お風呂に入った」を選択すると、その日の<strong>おみくじ（運勢）</strong>を引くことができます。入浴のご褒美として、運試しを楽しみましょう！
+                    </p>
+
+                    <div class="bg-purple-50 rounded-2xl p-6 my-6">
+                        <h3 class="font-bold text-purple-700 mb-4">🎴 おみくじの種類（入浴運勢）</h3>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-white font-bold px-3 py-1 rounded">神湯</span>
+                                <span class="text-gray-500 text-xs">（かみゆ）</span>
+                                <span class="text-gray-700">最高ランク！神がかった入浴運勢 ✨</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-red-500 text-white font-bold px-3 py-1 rounded">天晴</span>
+                                <span class="text-gray-500 text-xs">（あっぱれ）</span>
+                                <span class="text-gray-700">素晴らしい！お風呂に入って大正解</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-orange-500 text-white font-bold px-3 py-1 rounded">極楽</span>
+                                <span class="text-gray-500 text-xs">（ごくらく）</span>
+                                <span class="text-gray-700">極楽気分のバスタイムを楽しもう</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-pink-500 text-white font-bold px-3 py-1 rounded">良湯</span>
+                                <span class="text-gray-500 text-xs">（よいゆ）</span>
+                                <span class="text-gray-700">良いお湯でリラックス♪</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-teal-500 text-white font-bold px-3 py-1 rounded">整湯</span>
+                                <span class="text-gray-500 text-xs">（ととのゆ）</span>
+                                <span class="text-gray-700">心身ともに「ととのう」入浴に</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-blue-400 text-white font-bold px-3 py-1 rounded">微温</span>
+                                <span class="text-gray-500 text-xs">（ぬるまゆ）</span>
+                                <span class="text-gray-700">ぬるめでもOK、のんびり入ろう</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="bg-gray-500 text-white font-bold px-3 py-1 rounded">波乱</span>
+                                <span class="text-gray-500 text-xs">（はらん）</span>
+                                <span class="text-gray-700">波乱万丈？でもお風呂でリセット！</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 my-4">
+                        <p class="text-sm text-gray-700">
+                            💡 各ランクにはそれぞれ固有のタイトルと説明文が用意されており、さらに「ラッキーベストアクション」がランダムで表示されます。
+                        </p>
+                    </div>
+
+                    <p>
+                        お風呂に入ったことへの<strong>ご褒美</strong>として楽しめます。「今日も頑張ってお風呂に入ったから大吉だった！」というモチベーションアップに。
+                    </p>
+                </section>
+
+                <!-- セクション6 -->
+                <section id="pwa">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">6</span>
+                        ホーム画面に追加する
+                    </h2>
+                    <p>
+                        「フロハイッタ？」はPWA（Progressive Web App）対応。<strong>スマホのホーム画面</strong>に追加すると、まるでネイティブアプリのように使えます。
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 my-6">
+                        <div class="bg-gray-50 rounded-xl p-5">
+                            <h4 class="font-bold text-gray-700 mb-3">📱 iPhone（Safari）の場合</h4>
+                            <ol class="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                                <li>Safariでアプリを開く</li>
+                                <li>共有ボタン（□↑）をタップ</li>
+                                <li>「ホーム画面に追加」を選択</li>
+                                <li>「追加」をタップ</li>
+                            </ol>
+                        </div>
+                        <div class="bg-gray-50 rounded-xl p-5">
+                            <h4 class="font-bold text-gray-700 mb-3">🤖 Android（Chrome）の場合</h4>
+                            <ol class="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+                                <li>Chromeでアプリを開く</li>
+                                <li>メニュー（⋮）をタップ</li>
+                                <li>「ホーム画面に追加」を選択</li>
+                                <li>「追加」をタップ</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="bg-teal-50 border-l-4 border-teal-400 rounded-r-xl p-5 my-6">
+                        <h4 class="font-bold text-teal-700 mb-2">✨ ホーム画面追加のメリット</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• ワンタップで起動できる</li>
+                            <li>• フルスクリーンで表示される</li>
+                            <li>• 通知（今後対応予定）を受け取れる</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- セクション7 -->
+                <section id="tips">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                        <span
+                            class="bg-pink-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">7</span>
+                        活用のコツ
+                    </h2>
+
+                    <div class="space-y-4 my-6">
+                        <div class="feature-card bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                            <h4 class="font-bold text-gray-800 mb-2">💡 毎晩寝る前にチェック</h4>
+                            <p class="text-sm text-gray-600">寝る前に「今日入ったか、入らなかったか」を記録する習慣をつけると、自分のパターンが見えてきます。</p>
+                        </div>
+                        <div class="feature-card bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                            <h4 class="font-bold text-gray-800 mb-2">💡 HPを判断基準にする</h4>
+                            <p class="text-sm text-gray-600">「入るかどうか迷ったらHPを見る」というルールを決めておくと、判断が楽になります。</p>
+                        </div>
+                        <div class="feature-card bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+                            <h4 class="font-bold text-gray-800 mb-2">💡 完璧を求めない</h4>
+                            <p class="text-sm text-gray-600">記録を忘れても大丈夫。自分を責めず、気が向いた時に使うくらいがちょうどいいです。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- まとめ -->
+                <section class="mt-12">
+                    <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-6 my-6">
+                        <h3 class="font-bold text-gray-800 mb-4">📝 この記事のまとめ</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-500 mt-1">✓</span>
+                                <span>「フロハイッタ？」はダウンロード不要のWebアプリ</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-500 mt-1">✓</span>
+                                <span>HP（清潔度）を見て入浴タイミングを判断できる</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-500 mt-1">✓</span>
+                                <span>カレンダーで入浴履歴を振り返れる</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-500 mt-1">✓</span>
+                                <span>おみくじで入浴のご褒美を楽しく</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-pink-500 mt-1">✓</span>
+                                <span>ホーム画面に追加すると便利</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <div class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-8 text-center text-white my-10">
+                    <h3 class="font-bold text-xl mb-3 font-pop">さっそく使ってみよう！</h3>
+                    <p class="text-pink-100 mb-6 text-sm">
+                        あなたの清潔度を可視化して、入浴を「義務」から「戦略」に
+                    </p>
+                    <a href="https://app.bath-check.com/"
+                        class="inline-block bg-white text-pink-600 font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition">
+                        フロハイッタ？を開く →
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- 著者情報 -->
+            <footer class="border-t border-gray-200 pt-8 mt-10">
+                <div class="flex items-center gap-4">
+                    <img src="../thermos_icon.png" alt="サーモス" class="w-16 h-16 rounded-full object-cover">
+                    <div>
+                        <p class="font-bold text-gray-800">サーモス</p>
+                        <p class="text-sm text-gray-500">「フロハイッタ？」開発者。お風呂キャンセル界隈を救うため、入浴の科学を研究中。</p>
+                    </div>
+                </div>
+            </footer>
+        </article>
+
+        <!-- 関連記事 -->
+        <section class="mt-16">
+            <h2 class="text-lg font-bold text-gray-800 mb-6">📚 関連記事</h2>
+            <div class="space-y-4">
+                <a href="./bathing-frequency-science.html"
+                    class="block bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:border-pink-200 transition-all">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="bg-blue-100 text-blue-600 text-xs font-bold px-2 py-0.5 rounded-full">科学・知識</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 hover:text-pink-500 transition">「毎日お風呂」は本当に必要？皮膚科学から見る入浴頻度の真実
+                    </h3>
+                </a>
+                <a href="./bath-time-saving-tips.html"
+                    class="block bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:border-pink-200 transition-all">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span
+                            class="bg-purple-100 text-purple-600 text-xs font-bold px-2 py-0.5 rounded-full">ライフハック</span>
+                    </div>
+                    <h3 class="font-bold text-gray-800 hover:text-pink-500 transition">お風呂がめんどくさい時の時短テクニック10選</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center text-gray-400 text-xs bg-gray-50">
+        <p class="mb-4 font-bold">フロハイッタ？ 公式サイト</p>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="../" class="hover:text-pink-500 transition">ホーム</a>
+            <a href="../about.html" class="hover:text-pink-500 transition">運営者情報</a>
+            <a href="./" class="hover:text-pink-500 transition">コラム</a>
+            <a href="../contact.html" class="hover:text-pink-500 transition">お問い合わせ</a>
+            <a href="../privacy.html" class="hover:text-pink-500 transition">プライバシーポリシー</a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="https://x.com/bathcheck" target="_blank"
+                class="flex items-center gap-1 hover:text-black transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span>公式X (@bathcheck)</span>
+            </a>
+            <a href="https://note.com/bath_check" target="_blank" class="hover:text-green-600 transition">
+                開発者note
+            </a>
+        </div>
+        <p>&copy; 2025 フロハイッタ？ Project</p>
+    </footer>
+
+</body>
+
+</html>

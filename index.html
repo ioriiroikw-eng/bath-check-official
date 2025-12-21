@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="フロハイッタ？ Project">
     <meta name="theme-color" content="#ec4899">
-    
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5DPBJRNH');</script>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5DPBJRNH');</script>
     <link rel="icon" href="./icon.png" type="image/png">
     <link rel="apple-touch-icon" href="./icon.png">
 
@@ -24,9 +28,10 @@
     <meta name="google-site-verification" content="ZpCTa8erk3Gnomvg29N-tU4MTtk3vBm3GD2IVei9R8U" />
 
     <title>フロハイッタ？公式｜「お風呂キャンセル界隈」のための入浴最適化ツール</title>
-    <meta name="description" content="毎日お風呂に入る必要はありません。気温や活動量から清潔度(HP)を算出し、あなたにとって「適切な入浴タイミング」を可視化する無料Webアプリです。サボンちゃんの変化で汚さを管理しよう。">
+    <meta name="description"
+        content="毎日お風呂に入る必要はありません。気温や活動量から清潔度(HP)を算出し、あなたにとって「適切な入浴タイミング」を可視化する無料Webアプリです。サボンちゃんの変化で汚さを管理しよう。">
     <meta name="keywords" content="お風呂,めんどくさい,お風呂キャンセル界隈,ライフハック,アプリ,健康,フロハイッタ,入浴管理,サボンちゃん,清潔度">
-    
+
     <link rel="canonical" href="https://bath-check.com/" />
 
     <meta property="og:title" content="フロハイッタ？｜まだ、毎日お風呂に入ってるの？">
@@ -102,21 +107,67 @@
     }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
     <style>
-        body { font-family: 'Zen Maru Gothic', sans-serif; background-color: #fff; color: #333; overflow-x: hidden; }
-        .font-pop { font-family: 'Mochiy Pop One', sans-serif; }
-        .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(30px); }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-        .gradient-text { background: linear-gradient(45deg, #ec4899, #8b5cf6); -webkit-background-clip: text; color: transparent; }
-        
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: #fff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .font-pop {
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
         /* Q&Aのアコーディオン */
-        details > summary { list-style: none; cursor: pointer; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep { 0% {opacity: 0; margin-top: -10px} 100% {opacity: 1; margin-top: 0px} }
-        
+        details>summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: sweep .3s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0% {
+                opacity: 0;
+                margin-top: -10px
+            }
+
+            100% {
+                opacity: 1;
+                margin-top: 0px
+            }
+        }
+
         /* 画像スタイル */
         .screenshot-img {
             max-width: 300px;
@@ -126,26 +177,41 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .screenshot-img:hover { transform: translateY(-5px); }
+
+        .screenshot-img:hover {
+            transform: translateY(-5px);
+        }
 
         .char-img {
             max-width: 120px;
             width: 100%;
             height: auto;
             margin: 0 auto 1rem;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
             transition: transform 0.3s ease;
         }
-        .char-img:hover { transform: scale(1.1) rotate(5deg); }
+
+        .char-img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
     </style>
 </head>
+
 <body class="antialiased">
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DPBJRNH"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50 shadow-sm">
-        <div class="text-xl font-black font-pop text-pink-500">フロハイッタ？</div>
-        <a href="https://app.bath-check.com/" class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DPBJRNH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <header
+        class="w-full py-4 px-6 flex justify-between items-center max-w-5xl mx-auto sticky top-0 bg-white/90 backdrop-blur z-50 shadow-sm">
+        <a href="./" class="text-xl font-black font-pop text-pink-500">フロハイッタ？</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-bold text-gray-600">
+            <a href="./" class="text-pink-500">ホーム</a>
+            <a href="./about.html" class="hover:text-pink-500 transition">運営者情報</a>
+            <a href="./blog/" class="hover:text-pink-500 transition">コラム</a>
+            <a href="./contact.html" class="hover:text-pink-500 transition">お問い合わせ</a>
+        </nav>
+        <a href="https://app.bath-check.com/"
+            class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
     </header>
 
     <section class="pt-16 pb-24 px-6 text-center max-w-4xl mx-auto">
@@ -153,7 +219,8 @@
             まだ、毎日<br>
             <span class="gradient-text">お風呂に入ってるの？</span>
         </h1>
-        <p class="text-gray-600 font-bold mb-10 text-sm md:text-base leading-relaxed fade-in-up" style="animation-delay: 0.2s;">
+        <p class="text-gray-600 font-bold mb-10 text-sm md:text-base leading-relaxed fade-in-up"
+            style="animation-delay: 0.2s;">
             「入らなきゃ」という義務感を捨てよう。<br>
             あなたの清潔度(HP)を可視化し、<br class="md:hidden">最適なタイミングを提案する<br>
             <strong>新時代の入浴管理ツール。</strong>
@@ -165,7 +232,9 @@
             <p class="text-[10px] text-gray-400 mt-2">※放置するとこうなります</p>
         </div>
 
-        <a href="https://diagnosis.bath-check.com/" class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black py-4 px-12 rounded-full shadow-lg text-lg hover:scale-105 transition-all fade-in-up" style="animation-delay: 0.6s;">
+        <a href="https://diagnosis.bath-check.com/"
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-black py-4 px-12 rounded-full shadow-lg text-lg hover:scale-105 transition-all fade-in-up"
+            style="animation-delay: 0.6s;">
             今すぐ診断する（無料）
         </a>
     </section>
@@ -202,9 +271,11 @@
     </section>
 
     <section class="py-20 px-6 bg-gradient-to-br from-purple-500 to-pink-500 text-white overflow-hidden relative">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">10問でチェック</span>
+            <span
+                class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">10問でチェック</span>
             <h2 class="text-2xl md:text-4xl font-black mb-6 leading-tight font-pop">
                 あなたはプリンセス？<br>それともゾンビ？
             </h2>
@@ -212,15 +283,18 @@
                 「お風呂めんどくさい」「髪乾かすの無理」<br>
                 そんな限界社会人のための生存率チェック。
             </p>
-            
+
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
                 <div class="flex gap-4">
-                    <img src="./char_80.png" class="w-20 h-20 object-contain drop-shadow-md bg-white/20 rounded-full p-2" alt="プリンセス">
-                    <img src="./char_00.png" class="w-20 h-20 object-contain drop-shadow-md bg-black/20 rounded-full p-2" alt="ゾンビ">
+                    <img src="./char_80.png"
+                        class="w-20 h-20 object-contain drop-shadow-md bg-white/20 rounded-full p-2" alt="プリンセス">
+                    <img src="./char_00.png"
+                        class="w-20 h-20 object-contain drop-shadow-md bg-black/20 rounded-full p-2" alt="ゾンビ">
                 </div>
             </div>
 
-            <a href="https://diagnosis.bath-check.com/" class="inline-block bg-white text-pink-600 font-black py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-transform text-lg">
+            <a href="https://diagnosis.bath-check.com/"
+                class="inline-block bg-white text-pink-600 font-black py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-transform text-lg">
                 診断してみる（30秒） 👉
             </a>
         </div>
@@ -237,21 +311,42 @@
                 </p>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
-                        <span class="bg-pink-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                        <span class="bg-pink-500 text-white p-1 rounded-full mt-1 shrink-0"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg></span>
                         <div>
                             <strong class="block text-gray-800">時間経過による減衰</strong>
                             <span class="text-sm text-gray-600">入浴から時間が経つほど、清潔度の減少スピードは二次曲線的に加速します。</span>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="bg-blue-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+                        <span class="bg-blue-500 text-white p-1 rounded-full mt-1 shrink-0"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+                            </svg></span>
                         <div>
                             <strong class="block text-gray-800">気温・湿度との連動</strong>
-                            <span class="text-sm text-gray-600">OpenMeteo APIを使用し、あなたの地域のリアルタイム天気と連動。暑い日はダメージが増加します。</span>
+                            <span class="text-sm text-gray-600">OpenMeteo
+                                APIを使用し、あなたの地域のリアルタイム天気と連動。暑い日はダメージが増加します。</span>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="bg-orange-500 text-white p-1 rounded-full mt-1 shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></span>
+                        <span class="bg-orange-500 text-white p-1 rounded-full mt-1 shrink-0"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg></span>
                         <div>
                             <strong class="block text-gray-800">活動量の入力ブースト</strong>
                             <span class="text-sm text-gray-600">「食事」「外出」「運動」などのアクションボタンを押すことで、活動に応じた汚れがHPに反映されます。</span>
@@ -268,7 +363,7 @@
                 サボンちゃんの変化
             </h2>
             <p class="text-gray-600 text-sm mb-12">あなたの行動ひとつで、彼女はプリンセスにもゾンビにもなります。</p>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-3xl shadow-sm">
                     <img src="./char_80.png" alt="プリンセスサボン" class="char-img">
@@ -296,9 +391,10 @@
     <section class="py-20 px-6 bg-white">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-center text-xl font-black text-gray-800 mb-10 font-pop">よくある質問</h2>
-            
+
             <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. 無料で使えますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -308,7 +404,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. アプリのインストールは必要ですか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -319,7 +416,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. 入浴データはどこに保存されますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -329,7 +427,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. 機種変更時のデータ引き継ぎはできますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -339,7 +438,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. リセットボタンはいつ押すべきですか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -349,7 +449,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. HPが0になるとどうなりますか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -360,7 +461,8 @@
                     </p>
                 </details>
 
-                <details class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                <details
+                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
                     <summary class="flex justify-between items-center font-bold text-gray-700">
                         <span>Q. 毎日入らなくても本当に大丈夫ですか？</span>
                         <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
@@ -380,18 +482,32 @@
                 なぜこのアプリを作ったのか？<br>
                 「生存戦略」としての入浴哲学をnoteで公開中。
             </p>
-            <a href="https://note.com/bath_check" target="_blank" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition">
+            <a href="https://note.com/bath_check" target="_blank"
+                class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-pink-500 hover:text-white transition">
                 noteで思想を読む
             </a>
         </div>
-        <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-pink-500 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2">
+        </div>
     </section>
 
     <footer class="py-10 text-center text-gray-400 text-xs bg-gray-50">
         <p class="mb-4 font-bold">フロハイッタ？ 公式サイト</p>
         <div class="flex flex-wrap justify-center gap-4 mb-6">
-            <a href="https://x.com/bathcheck" target="_blank" class="flex items-center gap-1 hover:text-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="./" class="hover:text-pink-500 transition">ホーム</a>
+            <a href="./about.html" class="hover:text-pink-500 transition">運営者情報</a>
+            <a href="./blog/" class="hover:text-pink-500 transition">コラム</a>
+            <a href="./contact.html" class="hover:text-pink-500 transition">お問い合わせ</a>
+            <a href="./privacy.html" class="hover:text-pink-500 transition">プライバシーポリシー</a>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
+            <a href="https://x.com/bathcheck" target="_blank"
+                class="flex items-center gap-1 hover:text-black transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
                 <span>公式X (@bathcheck)</span>
             </a>
             <a href="https://note.com/bath_check" target="_blank" class="hover:text-green-600 transition">
@@ -402,4 +518,5 @@
     </footer>
 
 </body>
+
 </html>

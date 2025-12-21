@@ -123,7 +123,7 @@
                 <h2 class="font-bold text-gray-800 mb-3 text-sm">📌 この記事の目次</h2>
                 <ol class="space-y-2 text-sm text-gray-600">
                     <li><a href="#start" class="hover:text-pink-500 transition">1. アプリを始めよう</a></li>
-                    <li><a href="#hp" class="hover:text-pink-500 transition">2. 清潔度（HP）の見方</a></li>
+                    <li><a href="#hp" class="hover:text-pink-500 transition">2. メイン画面の見方</a></li>
                     <li><a href="#record" class="hover:text-pink-500 transition">3. 入浴・風呂キャンセルを記録する</a></li>
                     <li><a href="#calendar" class="hover:text-pink-500 transition">4. カレンダーで振り返る</a></li>
                     <li><a href="#fortune" class="hover:text-pink-500 transition">5. おみくじ機能</a></li>
@@ -172,44 +172,73 @@
                     <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                         <span
                             class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                        清潔度（HP）の見方
+                        メイン画面の見方
                     </h2>
                     <p>
-                        メイン画面の中央に表示される<strong>HP（ヒットポイント）</strong>があなたの現在の清潔度です。
+                        メイン画面では、あなたの現在の状態がひと目でわかります。
                     </p>
 
                     <div class="bg-orange-50 rounded-2xl p-6 my-6">
-                        <h3 class="font-bold text-orange-700 mb-4">🎮 HPの仕組み</h3>
-                        <ul class="space-y-3 text-gray-700">
+                        <h3 class="font-bold text-orange-700 mb-4">📱 画面の構成</h3>
+                        <ul class="space-y-4 text-gray-700">
                             <li class="flex items-start gap-3">
-                                <span
-                                    class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">100%</span>
-                                <span>お風呂上がり直後の状態。清潔度MAX！</span>
+                                <span class="text-2xl">🌡️</span>
+                                <div>
+                                    <strong>天気・気温</strong>
+                                    <p class="text-sm text-gray-600">現在の気温が表示されます。暑い日は清潔度が下がりやすくなります。</p>
+                                </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span
-                                    class="bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">50〜70%</span>
-                                <span>まだ余裕あり。今日は入らなくても大丈夫かも。</span>
+                                <span class="text-2xl">👥</span>
+                                <div>
+                                    <strong>昨日の風呂キャン推定人数</strong>
+                                    <p class="text-sm text-gray-600">あなただけじゃない！全国の仲間の推定人数を表示。</p>
+                                </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <span
-                                    class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">30%以下</span>
-                                <span>そろそろ入浴した方がいいタイミング。</span>
+                                <span class="text-2xl">👸</span>
+                                <div>
+                                    <strong>サボンちゃん</strong>
+                                    <p class="text-sm text-gray-600">清潔度に応じて表情や見た目が変化するキャラクター。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-2xl">⏱️</span>
+                                <div>
+                                    <strong>風呂キャンした時間</strong>
+                                    <p class="text-sm text-gray-600">最後にお風呂に入ってからの経過時間が表示されます。</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-2xl">💗</span>
+                                <div>
+                                    <strong>清潔度バー＆パーセント</strong>
+                                    <p class="text-sm text-gray-600">グラデーションのバーと数値で清潔度を表示。ハートアイコンが目印！</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-purple-50 border-l-4 border-purple-400 rounded-r-xl p-5 my-6">
-                        <h4 class="font-bold text-purple-700 mb-2">💡 HPが減る要因</h4>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>• <strong>時間経過</strong>：入浴後からの経過時間</li>
-                            <li>• <strong>活動量</strong>：運動や外出など</li>
-                            <li>• <strong>気温</strong>：暑い日は汗をかきやすい</li>
-                        </ul>
+                    <div class="bg-gradient-to-r from-orange-400 to-pink-400 rounded-2xl p-5 my-6">
+                        <h3 class="font-bold text-white mb-3">🎮 清潔度の目安</h3>
+                        <div class="grid grid-cols-3 gap-2 text-center text-sm">
+                            <div class="bg-white/90 rounded-lg p-3">
+                                <p class="font-bold text-green-600">70%以上</p>
+                                <p class="text-gray-600 text-xs">まだ大丈夫！</p>
+                            </div>
+                            <div class="bg-white/90 rounded-lg p-3">
+                                <p class="font-bold text-yellow-600">40〜70%</p>
+                                <p class="text-gray-600 text-xs">そろそろ…</p>
+                            </div>
+                            <div class="bg-white/90 rounded-lg p-3">
+                                <p class="font-bold text-red-600">40%以下</p>
+                                <p class="text-gray-600 text-xs">入った方がいいかも</p>
+                            </div>
+                        </div>
                     </div>
 
                     <p>
-                        HPはあくまで<strong>目安</strong>です。「今日は入らなくても大丈夫」という判断を罪悪感なくできるようにするためのものです。
+                        清潔度は<strong>時間経過・気温・活動量</strong>に応じて変化します。「今日は入らなくても大丈夫」という判断を罪悪感なくできるようにするためのものです。
                     </p>
                 </section>
 
@@ -227,13 +256,13 @@
                     <div class="grid md:grid-cols-2 gap-4 my-6">
                         <div class="feature-card bg-white border-2 border-pink-200 rounded-2xl p-5 text-center">
                             <div class="text-4xl mb-3">🛁</div>
-                            <h4 class="font-bold text-pink-600 mb-2">お風呂に入った</h4>
-                            <p class="text-sm text-gray-600">HPが100%にリセット。おみくじが引けて、カレンダーに「入浴」スタンプが付きます。</p>
+                            <h4 class="font-bold text-pink-600 mb-2">お風呂に入る</h4>
+                            <p class="text-sm text-gray-600">清潔度が100%にリセット。おみくじが引けて、カレンダーに「入浴」スタンプが付きます。</p>
                         </div>
                         <div class="feature-card bg-white border-2 border-purple-200 rounded-2xl p-5 text-center">
                             <div class="text-4xl mb-3">😴</div>
-                            <h4 class="font-bold text-purple-600 mb-2">風呂キャンセル</h4>
-                            <p class="text-sm text-gray-600">今日は入らないと決断。カレンダーに記録されます。</p>
+                            <h4 class="font-bold text-purple-600 mb-2">今日はもう寝る...</h4>
+                            <p class="text-sm text-gray-600">今日は入らないと決断。カレンダーに「風呂キャンセル」として記録されます。</p>
                         </div>
                     </div>
 

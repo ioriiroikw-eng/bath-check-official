@@ -214,9 +214,66 @@
             <a href="./blog/" class="hover:text-pink-500 transition">コラム</a>
             <a href="./contact.html" class="hover:text-pink-500 transition">お問い合わせ</a>
         </nav>
-        <a href="https://app.bath-check.com/"
-            class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
+        <div class="flex items-center gap-3">
+            <a href="https://app.bath-check.com/"
+                class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:bg-pink-400 transition hover:scale-105">アプリを開く</a>
+            <!-- モバイルメニューボタン -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-pink-500 transition p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
     </header>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/50 z-[60] hidden" onclick="closeMobileMenu()">
+        <div class="absolute right-0 top-0 h-full w-64 bg-white shadow-xl transform transition-transform"
+            onclick="event.stopPropagation()">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <span class="font-pop text-pink-500 font-bold">メニュー</span>
+                    <button onclick="closeMobileMenu()" class="text-gray-500 hover:text-pink-500 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-4 text-gray-700 font-bold">
+                    <a href="./" class="py-2 border-b border-gray-100 hover:text-pink-500 transition">🏠 ホーム</a>
+                    <a href="./about.html" class="py-2 border-b border-gray-100 hover:text-pink-500 transition">👤
+                        運営者情報</a>
+                    <a href="./blog/" class="py-2 border-b border-gray-100 hover:text-pink-500 transition">📝 コラム</a>
+                    <a href="./contact.html" class="py-2 border-b border-gray-100 hover:text-pink-500 transition">📧
+                        お問い合わせ</a>
+                    <a href="./privacy.html" class="py-2 border-b border-gray-100 hover:text-pink-500 transition">🔒
+                        プライバシーポリシー</a>
+                </nav>
+                <a href="https://app.bath-check.com/"
+                    class="mt-8 block text-center bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:scale-105 transition">
+                    アプリを開く →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', openMobileMenu);
+    </script>
+
 
     <section class="pt-16 pb-24 px-6 text-center max-w-4xl mx-auto">
         <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight fade-in-up">

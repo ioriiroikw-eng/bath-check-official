@@ -312,22 +312,23 @@
             <h2 class="text-center text-2xl font-black text-gray-800 mb-4 font-pop">機能ハイライト</h2>
             <p class="text-center text-xs font-bold text-gray-500 mb-16">面倒なお風呂を「ゲーム」に変える3つの機能</p>
 
-            <div class="grid md:grid-cols-3 gap-12 items-start">
-                <div class="text-center">
+            <div
+                class="flex gap-8 overflow-x-auto pb-6 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-12 md:overflow-visible md:pb-0">
+                <div class="text-center flex-shrink-0 w-72 md:w-auto snap-center">
                     <img src="./screen1.png" alt="メイン画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-pink-600 mb-2">1. 清潔度の可視化</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         時間経過や活動量でHPが減少。<br>「まだ大丈夫」か「限界」かを<br>直感的に判断できます。
                     </p>
                 </div>
-                <div class="text-center">
+                <div class="text-center flex-shrink-0 w-72 md:w-auto snap-center">
                     <img src="./screen2.png" alt="カレンダー画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-blue-500 mb-2">2. 履歴と天気連動</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
                         「いつ入ったっけ？」を自動記録。<br>暑い日はダメージ倍増など、<br>リアルな天気とも連動します。
                     </p>
                 </div>
-                <div class="text-center">
+                <div class="text-center flex-shrink-0 w-72 md:w-auto snap-center">
                     <img src="./screen3.png" alt="占い画面" class="screenshot-img mb-6 mx-auto">
                     <h3 class="font-bold text-lg text-purple-500 mb-2">3. 入浴＝報酬</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
@@ -338,61 +339,67 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-gradient-to-br from-purple-500 to-pink-500 text-white overflow-hidden relative">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
-        </div>
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span
-                class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">5つの質問で判明</span>
-            <h2 class="text-2xl md:text-4xl font-black mb-6 leading-tight font-pop">
-                あなたの肌タイプは？<br>今すぐチェック
-            </h2>
-            <p class="font-bold text-pink-100 mb-8 leading-relaxed">
-                乾燥肌？脂性肌？混合肌？<br>
-                お風呂の前に知っておきたい、あなたの肌質。
-            </p>
+    <!-- 診断セクション（横スクロール） -->
+    <section class="py-12 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <div
+                class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:pb-0">
+                <!-- 肌タイプ診断カード -->
+                <div
+                    class="flex-shrink-0 w-80 md:w-auto snap-center bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-3xl p-8 text-center relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                    </div>
+                    <div class="relative z-10">
+                        <span
+                            class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">5つの質問で判明</span>
+                        <h2 class="text-xl md:text-2xl font-black mb-4 leading-tight font-pop">
+                            あなたの肌タイプは？
+                        </h2>
+                        <p class="font-bold text-pink-100 mb-6 text-sm leading-relaxed">
+                            乾燥肌？脂性肌？混合肌？<br>
+                            お風呂の前に知っておきたい肌質。
+                        </p>
+                        <div class="flex justify-center gap-2 mb-6">
+                            <span class="text-2xl">🧴</span>
+                            <span class="text-2xl">💧</span>
+                            <span class="text-2xl">✨</span>
+                        </div>
+                        <a href="https://diagnosis.bath-check.com/"
+                            class="inline-block bg-white text-pink-600 font-black py-3 px-6 rounded-full shadow-xl hover:scale-105 transition-transform text-sm">
+                            肌タイプを診断 👉
+                        </a>
+                    </div>
+                </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-                <div class="flex gap-4">
-                    <span class="text-4xl">🧴</span>
-                    <span class="text-4xl">💧</span>
-                    <span class="text-4xl">✨</span>
+                <!-- 16タイプ診断カード -->
+                <div
+                    class="flex-shrink-0 w-80 md:w-auto snap-center bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-3xl p-8 text-center relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                    </div>
+                    <div class="relative z-10">
+                        <span
+                            class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">お風呂習慣から分析</span>
+                        <h2 class="text-xl md:text-2xl font-black mb-4 leading-tight font-pop">
+                            お風呂タイプは？
+                        </h2>
+                        <p class="font-bold text-blue-100 mb-6 text-sm leading-relaxed">
+                            毎日の入浴記録から、<br>
+                            あなたの入浴習慣を分析。
+                        </p>
+                        <div class="flex justify-center gap-2 mb-6">
+                            <span class="text-2xl">🌈</span>
+                            <span class="text-2xl">🧙</span>
+                            <span class="text-2xl">👑</span>
+                        </div>
+                        <a href="./bath-type-16.html"
+                            class="inline-block bg-white text-purple-600 font-black py-3 px-6 rounded-full shadow-xl hover:scale-105 transition-transform text-sm">
+                            16タイプを見る 👉
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <a href="https://diagnosis.bath-check.com/"
-                class="inline-block bg-white text-pink-600 font-black py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-transform text-lg">
-                肌タイプを診断する 👉
-            </a>
-        </div>
-    </section>
-
-    <!-- 16タイプ診断セクション -->
-    <section class="py-20 px-6 bg-gradient-to-br from-blue-500 to-purple-600 text-white overflow-hidden relative">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
-        </div>
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span
-                class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block">お風呂習慣から分析</span>
-            <h2 class="text-2xl md:text-4xl font-black mb-6 leading-tight font-pop">
-                あなたのお風呂タイプは？<br>16タイプ診断
-            </h2>
-            <p class="font-bold text-blue-100 mb-8 leading-relaxed">
-                毎日の入浴記録から、<br>
-                あなたの入浴習慣を分析します。
-            </p>
-            <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <span class="text-3xl">🌈</span>
-                <span class="text-3xl">🧙</span>
-                <span class="text-3xl">🎨</span>
-                <span class="text-3xl">❄️</span>
-                <span class="text-3xl">☀️</span>
-                <span class="text-3xl">👑</span>
-            </div>
-            <a href="./bath-type-16.html"
-                class="inline-block bg-white text-purple-600 font-black py-4 px-10 rounded-full shadow-xl hover:scale-105 transition-transform text-lg">
-                16タイプを見る 👉
-            </a>
         </div>
     </section>
     <section class="py-20 px-6 bg-white border-b border-gray-100">
@@ -460,20 +467,22 @@
             </h2>
             <p class="text-gray-600 text-sm mb-12">あなたの行動ひとつで、彼女はプリンセスにもゾンビにもなります。</p>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-3xl shadow-sm">
+            <div
+                class="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
+                <div class="bg-white p-6 rounded-3xl shadow-sm flex-shrink-0 w-64 md:w-auto snap-center">
                     <img src="./char_80.png" alt="プリンセスサボン" class="char-img">
                     <h3 class="font-bold text-pink-500 mb-2">HP 100~80%</h3>
                     <p class="text-xs text-gray-500 font-bold">状態：プリンセス</p>
                     <p class="text-sm text-gray-600 mt-2">入浴直後の無敵状態。<br>清潔感の権化であり、世界が彼女に味方しています。</p>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm">
+                <div class="bg-white p-6 rounded-3xl shadow-sm flex-shrink-0 w-64 md:w-auto snap-center">
                     <img src="./char_50.png" alt="困り顔サボン" class="char-img">
                     <h3 class="font-bold text-orange-400 mb-2">HP 50%以下</h3>
                     <p class="text-xs text-gray-500 font-bold">状態：要注意</p>
                     <p class="text-sm text-gray-600 mt-2">日常生活で汚れが蓄積。<br>そろそろ入浴を意識しないと、取り返しがつかなくなります。</p>
                 </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm border-2 border-gray-800 relative overflow-hidden">
+                <div
+                    class="bg-white p-6 rounded-3xl shadow-sm border-2 border-gray-800 relative overflow-hidden flex-shrink-0 w-64 md:w-auto snap-center">
                     <div class="absolute top-0 right-0 bg-gray-800 text-white text-[10px] px-2 py-1">DANGER</div>
                     <img src="./char_00.png" alt="ゾンビサボン" class="char-img">
                     <h3 class="font-bold text-gray-800 mb-2">HP 0%</h3>
@@ -484,87 +493,85 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-white">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-center text-xl font-black text-gray-800 mb-10 font-pop">よくある質問</h2>
+    <section class="py-12 px-6 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-center text-lg font-black text-gray-800 mb-6 font-pop">よくある質問</h2>
 
-            <div class="space-y-4">
+            <div class="space-y-2">
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
                         <span>Q. 無料で使えますか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
                         はい、完全無料でお使いいただけます。広告も控えめで、アプリ内課金もありません。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
                         <span>Q. アプリのインストールは必要ですか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        いいえ、インストール不要です。ブラウザでアクセスするだけですぐに使えます。<br>
-                        iPhoneの場合はSafariの「ホーム画面に追加」をすると、アプリのように全画面で使えて便利です。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        いいえ、インストール不要です。ブラウザでアクセスするだけですぐに使えます。iPhoneは「ホーム画面に追加」で便利に使えます。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
-                        <span>Q. 入浴データはどこに保存されますか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
+                        <span>Q. データはどこに保存されますか？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        データはお使いのブラウザ内（端末）にのみ保存されます。サーバーへ送信されることはないため、プライバシーの面でも安心してお使いいただけます。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        データはお使いのブラウザ内（端末）にのみ保存されます。サーバーへ送信されないため安心です。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
-                        <span>Q. 機種変更時のデータ引き継ぎはできますか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
+                        <span>Q. 機種変更時のデータ引き継ぎは？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        申し訳ありません。現在はブラウザごとの保存となっているため、他の端末へのデータ引き継ぎには対応しておりません。新しい端末で心機一転、清潔度100%から始めてください。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        現在はブラウザごとの保存のため、他端末への引き継ぎには対応しておりません。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
-                        <span>Q. リセットボタンはいつ押すべきですか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
+                        <span>Q. リセットボタンはいつ押すべき？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        基本的には「お風呂から上がった直後」を推奨しています。もちろん、お風呂に入る直前に「今から入るぞ！」という決意と共に押しても構いません。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        基本的には「お風呂から上がった直後」を推奨しています。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
-                        <span>Q. HPが0になるとどうなりますか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
+                        <span>Q. HPが0になるとどうなる？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        キャラクターがゾンビ化し、社会的・衛生的に「終わり」を迎えた状態になります。<br>
-                        速やかにお風呂に入って「リセット」ボタンを押し、人間に戻ることを強く推奨します。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        キャラクターがゾンビ化します。速やかにお風呂に入って「リセット」ボタンを押してください。
                     </p>
                 </details>
 
                 <details
-                    class="group bg-gray-50 rounded-2xl p-5 cursor-pointer open:bg-pink-50 transition border border-gray-100">
-                    <summary class="flex justify-between items-center font-bold text-gray-700">
-                        <span>Q. 毎日入らなくても本当に大丈夫ですか？</span>
-                        <span class="text-pink-400 group-open:rotate-180 transition">▼</span>
+                    class="group bg-gray-50 rounded-xl p-3 cursor-pointer open:bg-pink-50 transition border border-gray-100">
+                    <summary class="flex justify-between items-center font-bold text-gray-700 text-sm">
+                        <span>Q. 毎日入らなくても大丈夫？</span>
+                        <span class="text-pink-400 group-open:rotate-180 transition text-xs">▼</span>
                     </summary>
-                    <p class="mt-4 text-sm text-gray-600 leading-relaxed font-medium">
-                        医学的な推奨ではありませんが、このアプリは「入らなきゃ」という強迫観念で心が疲れてしまう人を救うために作られました。ご自身の肌の状態や体調と相談しながら、無理のない範囲で活用してください。
+                    <p class="mt-2 text-xs text-gray-600 leading-relaxed">
+                        「入らなきゃ」という強迫観念で疲れる人を救うアプリです。肌の状態や体調と相談しながら活用してください。
                     </p>
                 </details>
             </div>

@@ -64,6 +64,7 @@
             scroll-margin-top: 100px;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -404,6 +405,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_4", // みんなの肌潤風呂（乾燥肌科学）
+                "a8_7", // NALC（保湿）
+                "a8_2", // エプソムソルト（肌に優しい）
+                "a8_8", // アロベビー（敏感肌）
+                "a8_5"  // ティールズ（リラックス）
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>

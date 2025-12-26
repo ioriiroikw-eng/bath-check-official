@@ -64,6 +64,7 @@
             scroll-margin-top: 100px;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -450,6 +451,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_3", // イルコルポ（発汗）
+                "a8_1", // Relliant BATH（温浴）
+                "a8_2", // エプソムソルト（冷え対策）
+                "a8_4", // 肌潤風呂（乾燥対策）
+                "a8_16" // おすすめアイテム
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>

@@ -72,6 +72,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -589,6 +590,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_5", // アメリカ（ティールズ）
+                "a8_1", // リリアント
+                "amz_3", // Kindle
+                "a8_17", // おすすめ（プレースホルダー）
+                "amz_1"  // ギフト
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>

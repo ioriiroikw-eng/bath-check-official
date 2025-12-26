@@ -73,6 +73,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -457,6 +458,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_1", // Relliant BATH（時短で温まる）
+                "amz_2", // Audible（ながら美容）
+                "a8_3", // イルコルポ（発汗）
+                "a8_4", // 肌潤風呂（ケア時短）
+                "a8_5"  // ティールズ
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>

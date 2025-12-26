@@ -88,6 +88,7 @@
             animation: float 3s ease-in-out infinite;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -544,6 +545,27 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        // [AI INSTRUCTION]
+        // このページの広告を管理するには:
+        // 1. 'blog/js/ad-manager.js' の AD_DATA で利用可能な広告リストを確認してください。
+        // 2. 以下の selectedAds 配列を更新してください。
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_2",  // アースコンシャス エプソムソルト（疲労回復）
+                "amz_2", // Audible（退屈解消）
+                "a8_7",  // NALC ミルクローション（湯上がりケア）
+                "a8_1",  // Relliant BATH（温浴効果）
+                "amz_1"  // Amazonギフト（自分へのご褒美）
+            ];
+
+            if (window.BathCheckAds) {
+                window.BathCheckAds.insertAds(selectedAds);
+            }
+        });
+    </script>
 </body>
 
 </html>

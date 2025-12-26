@@ -64,6 +64,7 @@
             scroll-margin-top: 100px;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -522,6 +523,28 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        // [AI INSTRUCTION]
+        // このページの広告を管理するには:
+        // 1. 'blog/js/ad-manager.js' の AD_DATA で利用可能な広告リストを確認してください。
+        // 2. 以下の selectedAds 配列を更新してください。
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // この記事に表示する広告IDのリスト（最大5個）
+            const selectedAds = [
+                "amz_3", // Kindle Unlimited（お風呂で読書）
+                "a8_1",  // Relliant BATH（極上のバスタイム）
+                "a8_5",  // Dr Teal's（リラックス）
+                "amz_2", // Audible（聴く読書）
+                "a8_4"   // みんなの肌潤風呂（スキンケア）
+            ];
+
+            if (window.BathCheckAds) {
+                window.BathCheckAds.insertAds(selectedAds);
+            }
+        });
+    </script>
 </body>
 
 </html>

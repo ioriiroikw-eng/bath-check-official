@@ -64,6 +64,7 @@
             scroll-margin-top: 100px;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -377,6 +378,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "amz_1", // ギフト（性格に合わせて）
+                "a8_2", // エプソムソルト
+                "a8_18", // おすすめ
+                "a8_4", // 肌潤風呂
+                "amz_2" // Audible
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>

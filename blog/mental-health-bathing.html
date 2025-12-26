@@ -63,6 +63,7 @@
             scroll-margin-top: 100px;
         }
     </style>
+    <link rel="stylesheet" href="css/ads.css">
 </head>
 
 <body class="antialiased">
@@ -470,6 +471,19 @@
         <p>&copy; 2025 フロハイッタ？ Project</p>
     </footer>
 
+    <script src="js/ad-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const selectedAds = [
+                "a8_5", // Dr Teal's（リラックス）
+                "a8_1", // Relliant BATH（水素温浴）
+                "amz_3", // Kindle（デジタルデトックスの代わりに読書）
+                "amz_2", // Audible（ヒーリング）
+                "a8_3"  // イルコルポ（発汗デトックス）
+            ];
+            if (window.BathCheckAds) window.BathCheckAds.insertAds(selectedAds);
+        });
+    </script>
 </body>
 
 </html>
